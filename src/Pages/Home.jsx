@@ -5,7 +5,13 @@ export function Home() {
         <>
         <Header />
             <div className="bodyHome">
+                <div className="banerHome">
+                    <h2>BrainQI</h2>
+                </div>
 
+                <div className="containerHome">
+                    
+                </div>
             </div>
         </>
     )

@@ -25,6 +25,10 @@ export function Header() {
             <nav className="bodyHeader">
                 <Link to="/" ><Brain size={32} className="iconHeader"/></Link>
 
+                <div className="title">
+                    <h2>BrainQI</h2>
+                </div>
+
                 <ul className={active}>
                     <li className="navItemFirst" >
                         <a href="#">Home</a>
