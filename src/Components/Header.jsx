@@ -22,7 +22,7 @@ export function Header() {
 
     return(
         <>
-            <div className="bodyHeader">
+            <nav className="bodyHeader">
                 <Link to="/" ><Brain size={32} className="iconHeader"/></Link>
 
                 <ul className={active}>
@@ -42,7 +42,12 @@ export function Header() {
                     <div className="line2"></div>
                     <div className="line3"></div>
                 </div>
-            </div>
+            </nav>
         </>
     )
 }
+
+window.addEventListener("scroll", function() {
+    var header = document.querySelector("nav");
+    header.classList.toggle("sticky", window.scrollY > 200)
+})

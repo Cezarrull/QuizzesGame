@@ -4,6 +4,8 @@
     --black: #000000;
 
     --blue: #01003d;
+
+    --red: #ec0000;
 }
 
 * {
@@ -44,10 +46,22 @@ a:hover {
     z-index: 100;
 }
 
+.sticky {
+    background: var(--black);
+    height: 60px;
+}
+
 .iconHeader {
     color: var(--white);
     cursor: pointer;
-    width: min-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;align-items: center;
+    transition: 0.2s;
+}
+
+.sticky .iconHeader:hover {
+    color: var(--red);
 }
 
 .listHeader {
@@ -97,6 +111,11 @@ a:hover {
         border-bottom-left-radius: 16px;
         gap: 0;
     }
+
+    .sticky .listHeader {
+        top: 60px;
+        background: var(--black);
+    }
     
     .navItemFirst,
     .navItemQuite,
@@ -137,4 +156,10 @@ a:hover {
 
 .listHeader_active {
     transform: translateX(0%);
+}
+
+/* /// Home css /// */
+
+.bodyHome {
+    height: 200vh;
 }
