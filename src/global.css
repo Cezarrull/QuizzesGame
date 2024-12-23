@@ -1,0 +1,140 @@
+:root {
+    --white: #ffffff;
+    --gray: #333333;
+    --black: #000000;
+
+    --blue: #01003d;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* /// Header css /// */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;  
+    color: var(--white)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.bodyHeader {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0 70px;
+    height: 100px;
+    background: var(--blue);
+
+    top: 0;
+    transition: 1s;
+    z-index: 100;
+}
+
+.iconHeader {
+    color: var(--white);
+    cursor: pointer;
+    width: min-content;
+}
+
+.listHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.buttonMobileMenu {
+    display: none;
+}
+
+.buttonMobileMenu div {
+    width: 2rem;
+    height: 0.3rem;
+    margin: 0.3rem;
+    background: var(--white);
+    transition: 0.3s ease-in;
+}
+
+.listHeader {
+    display: flex;
+    gap: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .bodyHeader {
+        padding: 0 30px;
+    }
+    
+    .buttonMobileMenu {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .listHeader {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        height: 60vh;
+        width: 40vw;
+        background: var(--blue);
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+        border-bottom-left-radius: 16px;
+        gap: 0;
+    }
+    
+    .navItemFirst,
+    .navItemQuite,
+    .navItemEnd {
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+    }
+    
+    .navItemFirst:hover,
+    .navItemQuite:hover,
+    .navItemEnd:hover {
+        background: var(--gray);
+    }
+
+    .navItemEnd:hover {
+        border-bottom-left-radius: 16px;
+    }
+    
+    ul li a {
+        color: var(--white);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .buttonMobileMenu {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.listHeader_active {
+    transform: translateX(0%);
+}
